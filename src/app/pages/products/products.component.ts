@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Games } from 'src/app/models/product';
+import {  User } from 'src/app/models/product';
 import { ProductsService } from 'src/app/services/products.service';
 
 
@@ -10,15 +10,16 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit{
-  products: Games[] = []
+  users: User[] = []
 
   constructor(
     private productsService : ProductsService
   ){ }
 
-  ngOnInit(): void {
-    this.productsService.getAllProducts()
-    .subscribe((data) =>
-    this.products = data)
+  ngOnInit() {
+    this.productsService.getAllProducts().subscribe(users => {
+      this.users = users;
+    });
   }
+
 }

@@ -1,5 +1,10 @@
 <div class="product-container" *ngIf="currentProduct">
-  <p class="title">{{ currentProduct.title }}</p>
-  <img [src]="currentProduct.images[0]" alt="product image" width="400" />
-  <p class="description">{{ currentProduct.description }}</p>
+  <div class="contentProduct">
+    <img [src]="currentProduct.image" alt="product image" width="400" />
+    <div class="txt">
+      <p class="title">{{ currentProduct.title }}</p>
+      <p class="price">{{ currentProduct.price |currency }}</p>
+      <p class="description">{{ currentProduct.description }}</p>
+    </div>
+  </div>
 </div>

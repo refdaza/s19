@@ -1,12 +1,13 @@
 <div class="container">
-  <div class="product-container" *ngFor="let product of products">
-    <p class="title">{{ product.title }}</p>
-    <p class="description">{{ product.description }}</p>
+  <div class="product-container" *ngFor="let user of users">
     <img
-      [src]="product.images[0]"
+      [src]="user.image"
       alt="product image"
       width="200"
-      [routerLink]="['/product', product.id]"
+      [routerLink]="['/product', user.id]"
     />
+    <p class="title">{{ user.title }}</p>
+    <p class="price">{{user.price | currency}}</p>
+    <!-- <p class="description">{{ user.description }}</p> -->
   </div>
 </div>

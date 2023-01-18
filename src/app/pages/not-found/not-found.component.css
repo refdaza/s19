@@ -1,7 +1,43 @@
-.container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-    font-size: 32px;
+/* Variables */
+:root {
+  --blue: #0e0620;
+  --white: #fff;
+  --green: #2ccf6d;
+  }
+
+ .container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+ }
+.content {
+  display: flex;
+  margin: 0 auto;
+  width: 75%;
+  height: 50%;
+}
+.txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+}
+.txt h1 {
+  font-size: 200px;
+}
+.btn {
+  height: 40px;
+  width: 100px;
+  border-radius: 8px;
+  color:#0e0620;
+  border: 2px solid #2ccf6d;
+  background-color: white;
+}
+.btn:hover {
+  background-color: #2ccf6d;
+}
+.btn a {
+  color: #0e0620;
+  text-decoration: none;
 }

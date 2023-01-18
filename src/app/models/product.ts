@@ -1,14 +1,14 @@
-export interface Games {
-    id: string;
-    title: string;
-    price: number;
-    description: string;
-    category: Category;
-    images: string[];
+export interface User {
+  id: string,
+title: string,
+price: string,
+description: string,
+category: string ,
+image:string
 }
 
-interface Category{
-    id: number;
-    name: string;
-    typeImg: string;
-}
+// interface Category{
+//     id: number;
+//     name: string;
+//     typeImg: string;
+// }

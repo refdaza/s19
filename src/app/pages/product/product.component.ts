@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Games } from 'src/app/models/product';
+import { User } from 'src/app/models/product';
 import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent {
-  currentProduct!: Games
+  currentProduct!: User
   productId: string | null = null
 
   constructor(

@@ -1,21 +1,26 @@
 import { Injectable } from '@angular/core';
-import { Games } from '../models/product';
+import {  User } from '../models/product';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
-  private apiURI: string = "https://www.freetogame.com/api/games"
+  private corsAnywhereUrl = 'https://cors-anywhere.herokuapp.com/';
+  private apiURI: string = "https://fakestoreapi.com/products"
   constructor(
     private http: HttpClient
-  ) { }
+  ) {
 
+  }
+  getGames() {
+    return this.http.get(this.corsAnywhereUrl + 'https://fakestoreapi.com/products');
+  }
   getAllProducts(){
-    return this.http.get<Games[]>(this.apiURI)
+    return this.http.get<User[]>(this.apiURI)
   }
 
   getProductById(id: string){
-    return this.http.get<Games>(`${this.apiURI}/${id}`)
+    return this.http.get<User>(`${this.apiURI}/${id}`)
   }
 }
